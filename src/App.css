@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+h1,
+h2 {
+    font-size: 2rem; /* ou maior, se quiser mais impacto */
+    margin-bottom: 1rem;
+    text-align: center;
+    color: silver;
+}
+
+.container_btns {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.btn.favoritos {
+    background-color: #d4af37; /* dourado */
+    color: black;
+}
+
+.btn.limpar {
+    background-color: #b22222; /* vermelho escuro */
+    color: white;
+}
+
+.btn.favoritos img,
+.btn.limpar img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+}
+
+.container_input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 300px;
+}
+
+.campo_busca {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 400px;
+}
+
+.campo_busca img {
+    width: 30px;
+    height: 30px;
+    opacity: 0.6;
+}
+
+.container_cards p {
+    font-size: 18px;
+    color: #ccc;
+}
+
+.mensagem_vazia {
+    text-align: center;
+    margin-top: 40px;
+    animation: fadeIn 0.6s ease-in-out;
+    color: #ccc;
+}
+
+.mensagem_vazia span {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.mensagem_vazia p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.xbox {
+    background-color: #107c10;
+    color: white;
+}
+
+.playstation {
+    background-color: #003791;
+    color: white;
+}
+
+.nintendo {
+    background-color: #e60012;
+    color: white;
+}
+
+.neutral {
+    background-color: #333;
+    color: white;
+}
+
+.container_cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* isso centraliza os filhos horizontalmente */
+    gap: 20px;
+}
+
+.app-wrapper {
+    max-width: 900px; /* Limita a largura no desktop */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 20px; /* Espaçamento interno */
+    box-sizing: border-box;
+}
+
+/* Mobile: ocupa toda a largura */
+@media (max-width: 768px) {
+    .app-wrapper {
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container_btns,
+    .container_input {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container_btns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container_btns button {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .container_input {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .campo_busca {
+        width: 100%;
+        justify-content: center;
+    }
+
+    input[type="text"] {
+        width: 90%;
+        max-width: 300px;
+    }
+}

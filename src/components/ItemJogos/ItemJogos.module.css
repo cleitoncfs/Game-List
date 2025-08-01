@@ -1,0 +1,83 @@
+.card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: 600;
+    background-color: black;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Estiliza a figura que contém a imagem */
+.card figure {
+    display: flex;
+    margin: 0;
+}
+
+/* Estiliza a imagem do jogo */
+.card figure img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.cardContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 90%;
+    max-width: 500px;
+}
+
+.cardInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.botaoFavorito {
+    margin-top: 8px;
+    background: none;
+    border: none;
+    color: goldenrod;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.botaoFavorito:hover {
+    text-decoration: underline;
+}
+
+.favorito {
+    border: 2px solid gold;
+    background-color: #fffbe6;
+    position: relative;
+}
+
+/* .favorito::after {
+    content: "⭐";
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 0.8rem;
+    color: goldenrod;
+} */
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card figure img {
+        width: 100px;
+        height: 100px;
+    }
+}
